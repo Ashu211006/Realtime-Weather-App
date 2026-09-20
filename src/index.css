@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background:
+    linear-gradient(rgba(7, 20, 31, 0.35), rgba(7, 20, 31, 0.5)),
+    url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1800&q=85")
+      center / cover fixed;
+}
+
+.weather-card {
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.97);
+  color: #222;
+}
+
+.weather-card h2 {
+  margin: 0 0 26px;
+  font-size: 21px;
+  color: #7b8490;
+}
+
+.weather-details {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.weather-main,
+.weather-extra {
+  flex: 1;
+}
+
+.weather-main h3,
+.weather-extra h3 {
+  margin: 0;
+  color: #2196f3;
+  font-size: 22px;
+}
+
+.temperature-row {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.temperature-row img {
+  width: 92px;
+  height: 92px;
+}
+
+.temperature-row span {
+  color: #2196f3;
+  font-size: 68px;
+  font-weight: bold;
+}
+
+.weather-description {
+  margin: 0;
+  color: #7b8490;
+  font-size: 19px;
+  text-transform: capitalize;
+}
+
+.high-low {
+  display: flex;
+  justify-content: space-between;
+  margin: 28px 0 16px;
+  color: #2196f3;
+}
+
+.high-low span,
+.weather-extra p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.weather-extra p {
+  margin: 17px 0;
+  font-size: 18px;
+}
+
+.weather-extra p span {
+  color: #7b8490;
+  min-width: 130px;
+}
+
+@media (max-width: 700px) {
+  .weather-details {
+    flex-direction: column;
+  }
+
+  .weather-card {
+    padding: 18px;
+  }
+
+  .temperature-row span {
+    font-size: 54px;
+  }
+}
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.forecast-card {
+  padding: 12px 8px;
+  border-radius: 5px;
+  background: #2196f3;
+  color: white;
+  text-align: center;
+}
+
+.forecast-card h3 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.forecast-card img {
+  width: 60px;
+  height: 60px;
+}
+
+.forecast-card p {
+  min-height: 38px;
+  margin: 0 0 8px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+@media (max-width: 700px) {
+  .forecast-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-heading h2 {
+  margin-bottom: 26px;
+}
